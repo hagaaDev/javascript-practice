@@ -13,7 +13,7 @@ ECMAScript 5에 추가되어 있다.
 "use strict";
 
 /* 
-2. Variable (변수)
+2. Variable (변수) read/write
 
 - let (ES6에서 추가된 변수)
 : 변수를 선언할 수 있는 유일한 키워드
@@ -37,7 +37,7 @@ ECMAScript 5에 추가되어 있다.
   }
   console.log(age); // 4
 
-- constants
+- constant (read only)
 : 한번 값을 할당하고 나면 더 이상 바꿀 수 없음
 : 다시는 변경 하지 않을 데이터 타입을 사용할 것
  => 보안상의 이유
@@ -46,6 +46,10 @@ ECMAScript 5에 추가되어 있다.
 
  const daysInWeek = 7;
  const maxNumber = 5;
+
+ @@@@@@@@@ Note !
+ Immutable data types : primitive types, frozen objects (i.e. object.freeze())
+ Mutable data types : all objects by default are mutable in JS
 */
 let globalName = "global Name";
 {
