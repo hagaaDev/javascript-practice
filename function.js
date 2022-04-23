@@ -168,23 +168,23 @@ hello();
 function calculate(command, a, b) {
   switch (command) {
     case "add":
-      return console.log(a + b);
+      return a + b;
       break;
     case "substract":
-      return console.log(a - b);
+      return a - b;
       break;
     case "divide":
-      return console.log(a / b);
+      return a / b;
       break;
     case "multiply":
-      return console.log(a * b);
+      return a * b;
       break;
     case "remainder":
-      return console.log(a % b);
+      return a % b;
       break;
     default:
-      return "계산식이 정의되지 않았습니다.";
-      break;
+      throw Error("unknown command");
+    //return "계산식이 정의되지 않았습니다.";
   }
 }
-calculate("add", 3, 2);
+console.log(calculate("add", 3, 2));
